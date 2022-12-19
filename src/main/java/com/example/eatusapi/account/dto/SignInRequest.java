@@ -1,5 +1,10 @@
 package com.example.eatusapi.account.dto;
 
+import jdk.jfr.DataAmount;
+import lombok.Data;
+
+@Data
 public class SignInRequest{
-        String auth;
+        String id;
+        String password;
 }
