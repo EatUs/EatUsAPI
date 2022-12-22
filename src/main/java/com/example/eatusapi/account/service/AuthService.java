@@ -72,6 +72,8 @@ public class AuthService {
     {
         User user = userRepository.getByUserId(uid);
         logger.info("id : {}",uid);
+        logger.info("pass1 : {}", password);
+        logger.info("pass2 : {}", user.getPassword());
 
         if(!passwordEncoder.matches(password,user.getPassword()))
         {

@@ -1,4 +1,4 @@
-package com.example.eatusapi;
+/*package com.example.eatusapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,4 +10,4 @@ class EatUsApiApplicationTests {
     void contextLoads() {
     }
 
-}
+}*/
