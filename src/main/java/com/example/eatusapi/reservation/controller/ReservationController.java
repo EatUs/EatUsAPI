@@ -4,11 +4,10 @@ import com.example.eatusapi.reservation.dto.ResDto;
 import com.example.eatusapi.reservation.dto.ResQueryDto;
 import com.example.eatusapi.reservation.entity.Reservation;
 import com.example.eatusapi.reservation.service.ReservationService;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Date;
 
 @RestController
@@ -19,7 +18,7 @@ public class ReservationController {
     private ReservationService reservationService;
 
     @PostMapping
-    public Reservation reservation(@RequestBody ResDto resDto) {
+    public Reservation reservation(@RequestBody @Valid ResDto resDto) {
         return reservationService.reserve(resDto);
     }
 
